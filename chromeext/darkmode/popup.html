@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster:400|Raleway:300,400,500&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    .popup {
+        min-width: 220px;
+        min-height: 100px;
+        background: lightpink;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 10px;
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        font-family: "Lobster";
+        text-align: center;
+
+    }
+
+    .yellow {
+        color: lavenderblush;
+    }
+
+    .blue {
+        color: #588BE4;
+    }
+
+    p {
+        font-family: "Raleway", sans-serif;
+        font-size: 0.75rem;
+    }
+
+    .button {
+        background-color: lavenderblush;
+        position: relative;
+        height: 2rem;
+        width: 4rem;
+        border-radius: 25px;
+        transition: 1s;
+        font-family: "Raleway", sans-serif;
+        left: 80px;
+    }
+
+    .half {
+        position: absolute;
+        width: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+    }
+
+    .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background-color: lavender;
+        pointer-events: none;
+        transition: 1s;
+
+    }
+
+    @keyframes transformToBlue {
+        0% {
+            background-color: lavender;
+        }
+
+        100% {
+            background-color: #8ABFF0;
+        }
+    }
+
+    @keyframes transformToYellow {
+        0% {
+            background-color: lavender;
+        }
+
+        100% {
+            background-color: lightslategrey;
+        }
+    }
+
+    @keyframes moveCircleRight {
+        0% {
+            left: 0;
+            transform: translateX(0);
+            background-color: lavender;
+        }
+
+        100% {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #588BE4;
+        }
+    }
+
+    @keyframes moveCircleLeft {
+        0% {
+            left: 100%;
+            transform: translateX(-100%);
+            background-color: #588BE4;
+        }
+
+        100% {
+            left: 0;
+            transform: translateX(0);
+            background-color: lavender;
+        }
+    }
+</style>
+
+<body>
+    <div class="popup">
+        <h1> <span class="yellow">Switch Mode</span></h1>
+
+        <div class="button">
+            <div class="half" style="left: 5px;">🌛</div>
+            <div class="half" style="right: 5px; text-align: right;">🌞</div>
+            <div class="circle"></div>
+        </div>
+    </div>
+
+    <script src="js/popup.js">
+    </script>
+
+</body>
+
+</html>
